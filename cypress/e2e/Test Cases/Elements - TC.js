@@ -4,7 +4,9 @@ export { usernameInput, passwordInput, loginButton, adminmenuButton, adminuserna
          pimjontitleOption, pimsubunitDropdown, pimsubunitOption, pimsaveButton, pimreseachButton, pimemployeenameOption, pimsupervisornameOption, pimadduserButton, pimfirstnameInput, pimmiddlenameInput, pimlastnameInput, pimsaveaddButton, myinfomenuButton, myinfofirstnameInput,myinfomiddlenameInput, 
          myinfolastnameInput, myinfoemployeeIDInput, myinfootherIDInput, myinfofemaleOption, myinfosaveButton, contdetailsButton, contdetailsstreet1Input, contdetailsstreet2Input, contdetailscityInput, contdetailhomeInput, contadetailemailInput, contdetailsaveButton, emercontButton, addemergencyButton, 
          emergencynameInput, emergencyrelationshipInput, emergencyhomeInput, emergencymobileInput, emergencywotelephoneInput, emergencysaveButton, myinfodlicencenumber, dependentsButton, adddependentButton, dependentnameInput, dependentrelationshipInput, dependentrelationshipOption, dependentdobInput, 
-         dependentdobOption, dependentsaveButton, inmigrationButton, addinmigrationButton, documentvisaOption, numberInput, issueDateInput, dateOption, expiryDateInput, expiryDateOption, eligeblestatusInput};
+         dependentdobOption, dependentsaveButton, inmigrationButton, addinmigrationButton, documentvisaOption, numberInput, issueDateInput, dateOption, expiryDateInput, expiryDateOption, eligeblestatusInput, editinmiButton, editinminumberInput, editinmicommentInput, editinmisaveButton, deleteinmiButton, 
+         deleteinmiconfirmButton, jobmenuButton, jobJoinedDate, jobTitle, jobSpecification, jobCategory, subUnit, jobLocation, employeeStatus, inmiSaveButton, qualificationsButton, addWorkExperience, addWorkExperienceCompany, addWorkExperienceJobTitle, addWorkExperienceFrom, addWorkExperencieTo, addWorkExperencieDateOption,
+         addWorkExperencieToOption, addWorkExperencieSaveButton};
 
 //Login elements
 const usernameInput = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input';
@@ -122,3 +124,37 @@ const dateOption = ':nth-child(29) > .oxd-calendar-date';
 const expiryDateInput = ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input';
 const expiryDateOption = ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input-calendar > .oxd-calendar-wrapper > .oxd-calendar-dates-grid > :nth-child(30) > .oxd-calendar-date';
 const eligeblestatusInput = ':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const inmiSaveButton = '.oxd-button--secondary';
+
+//My info - Edit inmigration record elements
+const editinmiButton = ':nth-child(1) > .oxd-table-row > :nth-child(7) > .oxd-table-cell-actions > :nth-child(2)';
+const editinminumberInput = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const editinmicommentInput = '.oxd-textarea';
+const editinmisaveButton = '.oxd-button--secondary';
+
+//My info - Delete inmigration record elements
+const deleteinmiButton =':nth-child(7) > .oxd-table-cell-actions > :nth-child(1)';
+const deleteinmiconfirmButton = ':nth-child(7) > .oxd-table-cell-actions > :nth-child(1)';
+
+//My info - Job elements
+const jobmenuButton = ':nth-child(6) > .orangehrm-tabs-item';
+const jobJoinedDate = '.oxd-date-input > .oxd-input';
+const jobSpecification = '.input-container';
+const jobCategory = ':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text';
+const subUnit = ':nth-child(5) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text';
+const jobLocation = ':nth-child(6) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input';
+const employeeStatus = ':nth-child(7) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text';
+const jobTitle = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text';
+
+//My info tab - Quailifications elements
+const qualificationsButton = ':nth-child(9) > .orangehrm-tabs-item';
+
+//My info - Qualifications/Wrok experience elements
+const addWorkExperience = ':nth-child(2) > :nth-child(1) > .orangehrm-action-header > .oxd-button';
+const addWorkExperienceCompany = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const addWorkExperienceJobTitle = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const addWorkExperienceFrom = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input';
+const addWorkExperencieDateOption =':nth-child(28) > .oxd-calendar-date';
+const addWorkExperencieTo = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input';
+const addWorkExperencieToOption = ':nth-child(21) > .oxd-calendar-date';
+const addWorkExperencieSaveButton = '.oxd-button--secondary'
