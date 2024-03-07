@@ -6,7 +6,7 @@ import { usernameInput, passwordInput, loginButton,myinfomenuButton, myinfofirst
     dependentdobOption, dependentsaveButton,  inmigrationButton, addinmigrationButton, documentvisaOption, numberInput, issueDateInput, dateOption, expiryDateInput,
     expiryDateOption, eligeblestatusInput, editinmiButton, editinminumberInput, editinmicommentInput, editinmisaveButton, deleteinmiButton, 
     deleteinmiconfirmButton, jobJoinedDate, jobTitle, jobSpecification, jobmenuButton, jobCategory, subUnit, jobLocation, employeeStatus, inmiSaveButton, qualificationsButton,
-    addWorkExperencieTo, addWorkExperience, addWorkExperienceCompany, addWorkExperienceFrom, addWorkExperienceJobTitle, addWorkExperencieSaveButton} from './Elements - TC.js';
+    WorkExperencieTo, addWorkExperience, WorkExperienceCompany, WorkExperienceFrom, WorkExperienceJobTitle, WorkExperencieSaveButton} from './Elements - TC.js';
 
 describe('My info tab', function(){
     beforeEach(() => {
@@ -112,17 +112,17 @@ describe('My info tab', function(){
         it('Qualifications - Work experencie', function() {
             cy.get(qualificationsButton).click();
             cy.get(addWorkExperience).click();
-            cy.get(addWorkExperienceCompany).clear().type('Test');
-            cy.get(addWorkExperienceJobTitle).clear().type('Test');
-            cy.get(addWorkExperienceFrom).click().type('2024-28-03');
-            cy.get(addWorkExperencieTo).click().type('2024-31-03');
-            cy.get(addWorkExperencieSaveButton).click();
+            cy.get(WorkExperienceCompany).clear().type('Test');
+            cy.get(WorkExperienceJobTitle).clear().type('Test');
+            cy.get(WorkExperienceFrom).click().type('2024-28-03');
+            cy.get(WorkExperencieTo).click().type('2024-31-03');
+            cy.get(WorkExperencieSaveButton).click();
             cy.contains('Successfully Saved').should('be.visible')
         })
 
-        it('Qualifications - Education', function() {
+        // it('Qualifications - Education', function() {
             
-        })
+        // })
 
     afterEach(function() {
         if (this.currentTest.state === 'failed') {
