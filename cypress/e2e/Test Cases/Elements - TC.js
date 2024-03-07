@@ -4,7 +4,10 @@ export { usernameInput, passwordInput, loginButton, adminmenuButton, adminuserna
          pimjontitleOption, pimsubunitDropdown, pimsubunitOption, pimsaveButton, pimreseachButton, pimemployeenameOption, pimsupervisornameOption, pimadduserButton, pimfirstnameInput, pimmiddlenameInput, pimlastnameInput, pimsaveaddButton, myinfomenuButton, myinfofirstnameInput,myinfomiddlenameInput, 
          myinfolastnameInput, myinfoemployeeIDInput, myinfootherIDInput, myinfofemaleOption, myinfosaveButton, contdetailsButton, contdetailsstreet1Input, contdetailsstreet2Input, contdetailscityInput, contdetailhomeInput, contadetailemailInput, contdetailsaveButton, emercontButton, addemergencyButton, 
          emergencynameInput, emergencyrelationshipInput, emergencyhomeInput, emergencymobileInput, emergencywotelephoneInput, emergencysaveButton, myinfodlicencenumber, dependentsButton, adddependentButton, dependentnameInput, dependentrelationshipInput, dependentrelationshipOption, dependentdobInput, 
-         dependentdobOption, dependentsaveButton, inmigrationButton, addinmigrationButton, documentvisaOption, numberInput, issueDateInput, dateOption, expiryDateInput, expiryDateOption, eligeblestatusInput};
+         dependentdobOption, dependentsaveButton, inmigrationButton, addinmigrationButton, documentvisaOption, numberInput, issueDateInput, dateOption, expiryDateInput, expiryDateOption, eligeblestatusInput, editinmiButton, editinminumberInput, editinmicommentInput, editinmisaveButton, deleteinmiButton, 
+         deleteinmiconfirmButton, jobmenuButton, jobJoinedDate, jobTitle, jobSpecification, jobCategory, subUnit, jobLocation, employeeStatus, inmiSaveButton, qualificationsButton, addWorkExperience, WorkExperienceCompany, WorkExperienceJobTitle, WorkExperienceFrom, WorkExperencieTo, WorkExperencieDateOption,
+         WorkExperencieToOption, WorkExperencieSaveButton, addEducationButton, educationInstitute, educationMajor, educationYear, educationGPA, educationLevel, educationStartDate, educationEndDate, educationSaveButton, educationLevelOption, addSkillsButton, skillDropdown, skillYoExperience, skillComment, 
+         skillSaveButton, skillDropdownOption, addLicenseButton, licenseTypeDropdown, licenseNumber, licenseIssuedDate, licenseExpiryDate, licenseSaveButton, licenseTypeOption, pimedituserButton, pimOtherIDInput, pimedituserSaveButton, pimdeleteuserButton, pimdeleteuserconfirmButton};
 
 //Login elements
 const usernameInput = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input';
@@ -72,6 +75,15 @@ const pimmiddlenameInput = ':nth-child(2) > :nth-child(2) > .oxd-input';
 const pimlastnameInput = ':nth-child(3) > :nth-child(2) > .oxd-input';
 const pimsaveaddButton ='.oxd-button--secondary';
 
+//PIM - Edit user elements
+const pimedituserButton = ':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(2)';
+const pimOtherIDInput = ':nth-child(3) > :nth-child(1) > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const pimedituserSaveButton = ':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button';
+
+//PIM - Delete user elements
+const pimdeleteuserButton = ':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(1)';
+const pimdeleteuserconfirmButton = '.oxd-button--label-danger';
+
 //My Info - Personal details elements
 const myinfomenuButton = ':nth-child(6) > .oxd-main-menu-item';
 const myinfofirstnameInput = '.--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input';
@@ -122,3 +134,67 @@ const dateOption = ':nth-child(29) > .oxd-calendar-date';
 const expiryDateInput = ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input';
 const expiryDateOption = ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input-calendar > .oxd-calendar-wrapper > .oxd-calendar-dates-grid > :nth-child(30) > .oxd-calendar-date';
 const eligeblestatusInput = ':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const inmiSaveButton = '.oxd-button--secondary';
+
+//My info - Edit inmigration record elements
+const editinmiButton = ':nth-child(1) > .oxd-table-row > :nth-child(7) > .oxd-table-cell-actions > :nth-child(2)';
+const editinminumberInput = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const editinmicommentInput = '.oxd-textarea';
+const editinmisaveButton = '.oxd-button--secondary';
+
+//My info - Delete inmigration record elements
+const deleteinmiButton =':nth-child(7) > .oxd-table-cell-actions > :nth-child(1)';
+const deleteinmiconfirmButton = ':nth-child(7) > .oxd-table-cell-actions > :nth-child(1)';
+
+//My info - Job elements
+const jobmenuButton = ':nth-child(6) > .orangehrm-tabs-item';
+const jobJoinedDate = '.oxd-date-input > .oxd-input';
+const jobSpecification = '.input-container';
+const jobCategory = ':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text';
+const subUnit = ':nth-child(5) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text';
+const jobLocation = ':nth-child(6) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input';
+const employeeStatus = ':nth-child(7) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text';
+const jobTitle = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text';
+
+//My info tab - Quailifications elements
+const qualificationsButton = ':nth-child(9) > .orangehrm-tabs-item';
+
+//My info - Qualifications/Work experience elements
+const addWorkExperience = ':nth-child(2) > :nth-child(1) > .orangehrm-action-header > .oxd-button';
+const WorkExperienceCompany = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const WorkExperienceJobTitle = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const WorkExperienceFrom = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input';
+const WorkExperencieDateOption =':nth-child(28) > .oxd-calendar-date';
+const WorkExperencieTo = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input';
+const WorkExperencieToOption = ':nth-child(21) > .oxd-calendar-date';
+const WorkExperencieSaveButton = '.oxd-button--secondary'
+
+//My info - Qualifications/Education elements
+const addEducationButton =':nth-child(3) > :nth-child(1) > .orangehrm-action-header > .oxd-button';
+const educationInstitute = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const educationMajor = ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const educationYear = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input';
+const educationGPA = ':nth-child(5) > .oxd-input-group > :nth-child(2) > .oxd-input'; 
+const educationLevel = '.oxd-select-text'
+const educationStartDate = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input';
+const educationEndDate = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input';
+const educationSaveButton = '.oxd-button--secondary';
+const educationLevelOption ='.oxd-select-dropdown > :nth-child(2) > span';
+
+//My info - Qualifications/Skills elements
+const addSkillsButton = ':nth-child(4) > :nth-child(1) > .orangehrm-action-header > .oxd-button';
+const skillDropdown = '.oxd-select-text';
+const skillDropdownOption = '.oxd-select-dropdown > :nth-child(6)';
+const skillYoExperience = ':nth-child(2) > .oxd-input';
+const skillComment = '.oxd-textarea';
+const skillSaveButton = '.oxd-button--secondary';
+
+//My info - Qualifications/License elements
+const addLicenseButton = ':nth-child(6) > :nth-child(1) > .orangehrm-action-header > .oxd-button';
+const licenseTypeDropdown = '.oxd-select-text';
+const licenseTypeOption = '.oxd-select-dropdown > :nth-child(5)';
+const licenseNumber = ':nth-child(2) > .oxd-input';
+const licenseIssuedDate = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input'
+const licenseExpiryDate = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input'
+const licenseSaveButton = '.oxd-button--secondary';
+
