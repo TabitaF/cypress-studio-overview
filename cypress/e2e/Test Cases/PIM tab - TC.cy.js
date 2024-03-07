@@ -1,5 +1,6 @@
 import {usernameInput, passwordInput, loginButton, pimmenuButton, pimemployeenameInput, pimemployeeIDInput, pimsupervisornameInput, pimemployeestatusDropdown, pimemployeestatusOption, pimincludeDropdown, pimincludeOption, pimjontitleDropdown, 
-    pimjontitleOption, pimsubunitDropdown, pimsubunitOption, pimsaveButton, pimreseachButton, pimsupervisornameOption, pimemployeenameOption, pimadduserButton, pimfirstnameInput, pimlastnameInput, pimmiddlenameInput, pimsaveaddButton} from './Elements - TC.js';
+    pimjontitleOption, pimsubunitDropdown, pimsubunitOption, pimsaveButton, pimreseachButton, pimemployeenameOption, pimadduserButton, pimfirstnameInput, pimlastnameInput, pimmiddlenameInput, pimsaveaddButton,  pimedituserButton, pimOtherIDInput, 
+    pimedituserSaveButton, pimdeleteuserButton, pimdeleteuserconfirmButton} from './Elements - TC.js';
 
 describe('PIM tab - TC', function(){
     beforeEach(() => {
@@ -13,15 +14,13 @@ describe('PIM tab - TC', function(){
     })
         
         it('PIM tab filters', function() {
-            cy.get(pimemployeenameInput).clear('Or');
-            cy.get(pimemployeenameInput).type('Orange Test');
+            cy.get(pimemployeenameInput).clear('Or').type('Orange Test');
             cy.wait(2000);
             cy.get(pimemployeenameOption).click();
             cy.get(pimemployeeIDInput).type('0001');
             cy.wait(2000);
-            cy.get(pimsupervisornameInput).type('te');
-            cy.wait(2000);
-            cy.get(pimsupervisornameOption).click();
+            cy.get(pimsupervisornameInput).clear().type('Peter Mac Anderson').wait(2000);
+            cy.contains('Peter Mac Anderson').click();
             cy.get(pimemployeestatusDropdown).click();
             cy.get(pimemployeestatusOption).click();
             cy.get(pimincludeDropdown).click();
@@ -43,6 +42,19 @@ describe('PIM tab - TC', function(){
             cy.get(pimmiddlenameInput).type('test');
             cy.get(pimsaveaddButton).click();
             cy.contains('Successfully Saved').should('be.visible');
+        })
+
+        it('PIM - Edit user', function() {
+            cy.get(pimedituserButton).click();
+            cy.get(pimOtherIDInput).clear().type('9999');
+            cy.get(pimedituserSaveButton).click();
+            cy.contains('Successfully Updated').should('be.visible');
+        })
+
+        it('PIM - Delete user', function() {
+            cy.get(pimdeleteuserButton).click();
+            cy.get(pimdeleteuserconfirmButton).click();
+            cy.contains('Successfully Deleted').should('be.visible');
         })
 
     afterEach(function() {
