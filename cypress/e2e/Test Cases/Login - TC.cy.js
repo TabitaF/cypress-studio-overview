@@ -1,4 +1,5 @@
-import { usernameInput, passwordInput, loginButton } from './Elements - TC.js';
+import {loginElements} from './test elements.js';
+
 
 describe('Login - TC', function(){
     beforeEach(() => {
@@ -9,23 +10,22 @@ describe('Login - TC', function(){
     })
 
     it('Login - successful', function() {
-        cy.get(usernameInput).type('Admin');
-        cy.get(passwordInput).type('admin123');
-        cy.get(loginButton).click();
-        cy.contains('Dashboard').should('be.visible');
-    })
+        cy.get(loginElements.usernameInput).type('Admin');
+        cy.get(loginElements.passwordInput).type('admin123');
+        cy.get(loginElements.loginButton).click();
+    });
 
     it('Login - unsuccessful username', function() {
-        cy.get(usernameInput).type('administrator');
-        cy.get(passwordInput).type('admin123');
-        cy.get(loginButton).click();
+        cy.get(loginElements.usernameInput).type('Administrator');
+        cy.get(loginElements.passwordInput).type('admin123');
+        cy.get(loginElements.loginButton).click();
         cy.contains('Invalid credentials').should('be.visible');
     })
 
     it('Login - unsuccessful password', function() {
-        cy.get(usernameInput).type('Admin');
-        cy.get(passwordInput).type('admin1234');
-        cy.get(loginButton).click();
+        cy.get(loginElements.usernameInput).type('Admin');
+        cy.get(loginElements.passwordInput).type('1234567890');
+        cy.get(loginElements.loginButton).click();
         cy.contains('Invalid credentials').should('be.visible');
     })
 

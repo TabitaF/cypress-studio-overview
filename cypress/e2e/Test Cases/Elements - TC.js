@@ -46,7 +46,7 @@ const editusernameInput = ':nth-child(2) > .oxd-input';
 const editsaveButton = '.oxd-button--secondary';
 
 //Admin - Delete user elements
-const deleteuserButton = ':nth-child(12) > .oxd-table-row > :nth-child(6) > .oxd-table-cell-actions > :nth-child(1) > .oxd-icon';
+const deleteuserButton = ':nth-child(2) > .oxd-table-row > :nth-child(6) > .oxd-table-cell-actions > :nth-child(1)';
 const deleteuserconfirmButton = '.oxd-button--label-danger';
 const deleteusercancelButton ='.oxd-button--text';
 

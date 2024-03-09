@@ -16,9 +16,9 @@ describe('Admin tab - TC', function(){
             cy.wait(2000);
             cy.get(userroleDropdown).click();
             cy.get(roleDropdownOption).click();
-            cy.get(employeeNameInput).type('Orange Test');
+            cy.get(employeeNameInput).type('te');
             cy.wait(2000);
-            cy.get(employeeNameOption).click();
+            cy.contains('Wendolyn Mr. Teena Robel Fisher').click();
             cy.get(statusDropdown).click();
             cy.get(statusDropdownOption).click();
             cy.get(saveButton).click();
@@ -30,11 +30,10 @@ describe('Admin tab - TC', function(){
             cy.get(adduserroleDropdown).click();
             cy.get(adduserroleDropdownOption).click();
             cy.get(adduseremployeeNameInput).click();
-            cy.get(adduseremployeeNameInput).type('Orange Test');
+            cy.get(adduseremployeeNameInput).type('te');
             cy.wait(2000);
-            cy.get(adduseremployeeNameOption).click();
-            cy.get(adduserstatusDropdown).click();
-            cy.get(adduserstatusDropdownOption).click();
+            cy.contains('Wendolyn Mr. Teena Robel Fisher').click();
+            cy.get(adduserstatusDropdown).click().get(adduserstatusDropdownOption).click();
             cy.get(adduserusernameInput).type('Test01');
             cy.get(adduserpasswordInput).type('admin123');
             cy.get(adduserconfirmpasswordInput).type('admin123');
@@ -46,10 +45,9 @@ describe('Admin tab - TC', function(){
          it('Admin - Edit user', function() {
             cy.get(edituserButton).click();
             cy.get(editemployeenameInput).click();
-            cy.get(editemployeenameInput).clear('Or');
-            cy.get(editemployeenameInput).type('Orange Test');
+            cy.get(editemployeenameInput).clear('Ti').type('Timothy Lewis Amiano');
             cy.wait(2000);
-            cy.get(editemployeenameOption).click();
+            cy.contains('Timothy Lewis Amiano').click();
             cy.get(editsaveButton).click();
             cy.contains('Successfully Update').should('be.visible');
         })
