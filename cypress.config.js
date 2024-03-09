@@ -14,7 +14,9 @@ module.exports = defineConfig({
       "chromeWebSecurity": false,
       "video": true,
       "projectId": "ifkdqm",
-      "recordKey": "41580c33-6ab1-4a8d-af05-77ed9fdeeb94"
+      "recordKey": "41580c33-6ab1-4a8d-af05-77ed9fdeeb94",
+      "defaultCommandTimeout" : 20000
+      
      }
 
     
