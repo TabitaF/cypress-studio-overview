@@ -1,5 +1,3 @@
-
-
 export const adminElements = {
     //admin
     adminmenuButton : ':nth-child(1) > .oxd-main-menu-item',

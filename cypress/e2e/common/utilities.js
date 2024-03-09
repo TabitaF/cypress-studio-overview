@@ -1,4 +1,4 @@
-import { loginElements } from "../pages/loginPageElements";
+import { loginElements } from "../elementsPages/loginPageElements";
 
 const URL_PAGE = 'https://opensource-demo.orangehrmlive.com/'
 /**
@@ -25,4 +25,12 @@ export function loginPageDefault(user='Admin', password='admin123') {
     }
 
     cy.get(loginElements.loginButton).click();
+}
+
+/**
+ * This funtion is used to validate if the text is visible
+ * @param {string} text - The text to validate
+ */
+export function containShouldBeVisible(text) {
+    cy.contains(text).should('be.visible');
 }

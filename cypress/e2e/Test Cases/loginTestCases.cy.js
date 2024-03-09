@@ -1,4 +1,4 @@
-import { loginPageDefault, startPage } from '../common/utilities.js';
+import { containShouldBeVisible, loginPageDefault, startPage } from '../common/utilities.js';
 
 describe('Login - TC', function () {
     beforeEach(() => {
@@ -11,17 +11,17 @@ describe('Login - TC', function () {
 
     it('Login - unsuccessful username', function () {
         loginPageDefault('Administrator', 'admin123');
-        cy.contains('Invalid credentials').should('be.visible');
+        containShouldBeVisible('Invalid credentials');
     })
 
     it('Login - unsuccessful password', function () {
         loginPageDefault('Admin', 'admin123456789');
-        cy.contains('Invalid credentials').should('be.visible');
+        containShouldBeVisible('Invalid credentials');
     })
 
     it('Login - empty fields', function () {
         loginPageDefault('', '');
-        cy.contains('Required').should('be.visible');
+        containShouldBeVisible('Required');
     })
     afterEach(function () {
         cy.wait(2000);
