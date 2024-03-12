@@ -1,38 +1,3 @@
-export const adminElements = {
-    //admin
-    adminmenuButton : ':nth-child(1) > .oxd-main-menu-item',
-    adminusernameInput : ':nth-child(2) > .oxd-input',
-    userroleDropdown : ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
-    roleDropdownOption : '.oxd-select-dropdown > :nth-child(2)',
-    employeeNameInput : '.oxd-autocomplete-text-input > input',
-    employeeNameOption : '.oxd-autocomplete-option',
-    statusDropdown : ':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
-    statusDropdownOption : '.oxd-select-dropdown > :nth-child(2)',
-    saveButton : '.oxd-form-actions > .oxd-button--secondary',
-    //add user
-    adduserButton : '.orangehrm-header-container > .oxd-button',
-    adduserroleDropdown : ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
-    adduserroleDropdownOption : '.oxd-select-dropdown > :nth-child(2)',
-    adduseremployeeNameInput : '.oxd-autocomplete-text-input > input',
-    adduseremployeeNameOption : '.oxd-autocomplete-option',
-    adduserstatusDropdown : ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
-    adduserstatusDropdownOption : '.oxd-select-dropdown > :nth-child(2)',
-    adduserusernameInput : ':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-input',
-    adduserpasswordInput : '.user-password-cell > .oxd-input-group > :nth-child(2) > .oxd-input',
-    adduserconfirmpasswordInput : ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input',
-    addusersaveButton : '.oxd-button--secondary',
-    //edit user
-    edituserButton : ':nth-child(1) > .oxd-table-row > :nth-child(6) > .oxd-table-cell-actions > :nth-child(2)',
-    editemployeenameInput : '.oxd-autocomplete-text-input > input',
-    editemployeenameOption : '.oxd-autocomplete-option',
-    editusernameInput : ':nth-child(2) > .oxd-input',
-    editsaveButton : '.oxd-button--secondary',
-    //delete user
-    deleteuserButton : ':nth-child(2) > .oxd-table-row > :nth-child(6) > .oxd-table-cell-actions > :nth-child(1)',
-    deleteuserconfirmButton : '.oxd-button--label-danger',
-    deleteusercancelButton :'.oxd-button--text'
-};
-
 export const pimElements = {
     //PIM tab elements
     pimmenuButton : ':nth-child(2) > .oxd-main-menu-item',
