@@ -11,7 +11,7 @@ import {
     educationMajor, educationYear, educationGPA, educationLevel, educationStartDate, educationEndDate, educationSaveButton, educationLevelOption, addSkillsButton, skillDropdown,
     skillYoExperience, skillComment, skillSaveButton, skillDropdownOption, addLicenseButton, licenseTypeDropdown, licenseNumber, licenseIssuedDate, licenseExpiryDate, licenseSaveButton,
     licenseTypeOption
-} from './Elements - TC.js';
+} from './Elements.js';
 
 describe('My info tab', function () {
     beforeEach(() => {

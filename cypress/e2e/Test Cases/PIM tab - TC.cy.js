@@ -1,4 +1,4 @@
-import { loginElements, pimElements } from './test elements.js';
+import { loginElements, pimElements } from './testElements.js';
 
 describe('PIM tab - TC', function () {
     beforeEach(() => {
