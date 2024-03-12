@@ -24,7 +24,6 @@ describe('Login - TC', function () {
         containShouldBeVisible('Required');
     })
     afterEach(function () {
-        cy.wait(2000);
         if (this.currentTest.state === 'failed') {
             cy.screenshot();
         };
