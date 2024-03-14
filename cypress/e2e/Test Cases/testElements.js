@@ -1,35 +1,4 @@
-export const pimElements = {
-    //PIM tab elements
-    pimmenuButton : ':nth-child(2) > .oxd-main-menu-item',
-    pimemployeenameInput : ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-autocomplete-wrapper > .oxd-autocomplete-text-input > input',
-    pimemployeenameOption : '.oxd-autocomplete-option',
-    pimemployeeIDInput : ':nth-child(2) > .oxd-input',
-    pimsupervisornameInput : ':nth-child(5) > .oxd-input-group > :nth-child(2) > .oxd-autocomplete-wrapper > .oxd-autocomplete-text-input > input',
-    pimsupervisornameOption : '.oxd-autocomplete-dropdown > :nth-child(1)',
-    pimemployeestatusDropdown : ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
-    pimemployeestatusOption : '.oxd-select-dropdown > :nth-child(2)', //freelance
-    pimincludeDropdown : ':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
-    pimincludeOption : '.oxd-select-dropdown > :nth-child(2) > span', //current and past employees
-    pimjontitleDropdown : ':nth-child(6) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
-    pimjontitleOption : '.oxd-select-dropdown > :nth-child(2)', //Account assistant
-    pimsubunitDropdown : ':nth-child(7) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
-    pimsubunitOption : '.--indent-1', //OrangeHRM
-    pimsaveButton : '.oxd-form-actions > .oxd-button--secondary',
-    pimreseachButton : '.oxd-button--ghost',
-    //PIM - Add new user elements
-    pimadduserButton : '.orangehrm-header-container > .oxd-button',
-    pimfirstnameInput : '.--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input',
-    pimmiddlenameInput : ':nth-child(2) > :nth-child(2) > .oxd-input',
-    pimlastnameInput : ':nth-child(3) > :nth-child(2) > .oxd-input',
-    pimsaveaddButton :'.oxd-button--secondary',
-    //PIM - Edit user elements
-    pimedituserButton : ':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(2)',
-    pimOtherIDInput : ':nth-child(3) > :nth-child(1) > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input',
-    pimedituserSaveButton : ':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button',
-    //PIM - Delete user elements
-    pimdeleteuserButton : ':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(1)',
-    pimdeleteuserconfirmButton : '.oxd-button--label-danger'
-};
+
 
 export const myinfoElements = {
     //My info - Contact details  elements

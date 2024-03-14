@@ -8,6 +8,11 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+// commands.js
+import 'cypress-file-upload';
+
+// Resto de tus comandos personalizados
+
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
