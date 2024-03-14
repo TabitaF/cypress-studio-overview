@@ -5,7 +5,7 @@ describe('Login - TC', function () {
         startPage();
     })
 
-    it('Login - successful', function () {
+    it.only('Login - successful', function () {
         loginPageDefault();
     });
 

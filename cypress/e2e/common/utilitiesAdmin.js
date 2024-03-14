@@ -42,10 +42,10 @@ export function adminSearchButton() {
  * 
  * @param {string} usernameInput - The username to input
  */
-// export function containRecord(text, usernameInput = 'Test01') {
-//     cy.get(adminPageElements.adminMenuButton).click();
-//     cy.get(adminPageElements.usernameInput).clear(text).type(usernameInput);
-//     adminSearchButton();
+export function containRecord(text, usernameInput = 'Test01') {
+    cy.get(adminPageElements.adminMenuButton).click();
+    cy.get(adminPageElements.usernameInput).clear(text).type(usernameInput);
+    adminSearchButton();
 //     cy.get('.resultado').then(($resultados) => {
 
 //         if ($resultados.length > 0) {
@@ -56,7 +56,7 @@ export function adminSearchButton() {
 //             cy.contains('No Records Found'); // Muestra el mensaje "no records found"
 //         }
 //     })
-// }
+ }
 
 /**
  * This funcion is used to click the admin menu button
