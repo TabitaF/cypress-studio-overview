@@ -1,4 +1,7 @@
 import { pimPagesElements } from "../elementsPages/pimPageElements";
+import { containShouldBeVisible } from "./utilities";
+import { addNewUserButton, saveButton } from "./utilitiesAdmin";
+
 const imageTest = 'cypress/fixtures/imageTest.png'
 
 const numeroAleatorio1 = Math.floor(Math.random() * 6) + 1;
@@ -200,4 +203,25 @@ export function pimAttachmentsEditUser() {
  */
 export function pimSaveAttachButton() {
     cy.get(pimPagesElements.pimSaveAttachButton).click();
+}
+
+/**
+ * This function is used to click the add new user in PIM screen
+ * Note: This function is used to navigate to the PIM users screen, when 
+ * using this function you must return to the screen of your test case
+ * @returns the name of the user created
+ */
+export function createPIMUserTest() {
+    pimMenuButton();
+
+    const firstName = 'Test01';
+    const middleName = 'Test02';
+    const lastName = `${Date.now()}`;
+
+    addNewUserButton();
+    pimAddEmployeeInputFields(firstName, middleName, lastName);
+    saveButton();
+    containShouldBeVisible('Successfully Saved');
+
+    return `${firstName} ${middleName} ${lastName}`
 }
