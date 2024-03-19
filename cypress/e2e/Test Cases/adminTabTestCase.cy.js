@@ -24,7 +24,7 @@ describe('Admin tab - TC', function () {
         adminFiltersInputs();
         adminFiltersDropdowns();
         adminSearchButton();
-        containShouldBeVisible('Record Found');
+        containShouldBeVisible('No Record Found');
     })
 
     it('Admin - Edit user', function () {

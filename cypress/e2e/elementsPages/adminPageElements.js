@@ -34,7 +34,6 @@ export const adminPageElements = {
     editemployeenameInput : '.oxd-autocomplete-text-input > input',
     editemployeenameOption : '.oxd-autocomplete-option',
     editusernameInput : ':nth-child(2) > .oxd-input',
-    editsaveButton : '.oxd-button--secondary',
     //delete user
     deleteuserButton : ':nth-child(2) > .oxd-table-row > :nth-child(6) > .oxd-table-cell-actions > :nth-child(1)',
     deleteuserconfirmButton : '.oxd-button--label-danger',

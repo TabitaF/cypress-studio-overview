@@ -58,5 +58,5 @@ export const pimPagesElements = {
     //PIM - Add attachments in a edit user elements
     pimAttachmentsEditUser:'.orangehrm-action-header > .oxd-button',
     pimBrowseButton: '.oxd-file-button',
-    pimSaveAttachButton:'.orangehrm-card-container > .oxd-form > .oxd-form-actions > .oxd-button--secondary'
+    pimSaveAttachButton:'.orangehrm-attachment > .orangehrm-card-container > .oxd-form > .oxd-form-actions > .oxd-button--secondary'
 };

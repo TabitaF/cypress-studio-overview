@@ -1,4 +1,5 @@
 import { adminPageElements } from "../elementsPages/adminPageElements";
+import { containShouldBeVisible } from "./utilities";
 
 const numeroAleatorio0 = Math.floor(Math.random() * 2) + 1;
 
@@ -46,17 +47,17 @@ export function containRecord(text, usernameInput = 'Test01') {
     cy.get(adminPageElements.adminMenuButton).click();
     cy.get(adminPageElements.usernameInput).clear(text).type(usernameInput);
     adminSearchButton();
-//     cy.get('.resultado').then(($resultados) => {
+    //     cy.get('.resultado').then(($resultados) => {
 
-//         if ($resultados.length > 0) {
-//             // Hay resultados
-//             cy.contains('Record Found'); // Muestra el mensaje "record found"
-//         } else {
-//             // No hay resultados
-//             cy.contains('No Records Found'); // Muestra el mensaje "no records found"
-//         }
-//     })
- }
+    //         if ($resultados.length > 0) {
+    //             // Hay resultados
+    //             cy.contains('Record Found'); // Muestra el mensaje "record found"
+    //         } else {
+    //             // No hay resultados
+    //             cy.contains('No Records Found'); // Muestra el mensaje "no records found"
+    //         }
+    //     })
+}
 
 /**
  * This funcion is used to click the admin menu button
@@ -93,10 +94,10 @@ export function selectUserRole(numeroAleatorio) {
  * @param {string} employeeName - The employee name to input
  * @param {string} username - The username to input
  */
-export function inputFields(employeeName = 'Orange Test', username = 'Test01', password = 'admin123', confirmPassword = 'admin123') {
+export function inputFields(employeeName = 'Chad', username = 'Kennedy', password = 'admin123', confirmPassword = 'admin123') {
     cy.get(adminPageElements.adduseremployeeNameInput).type(employeeName);
     cy.wait(2000);
-    cy.contains('Orange Test').click();
+    cy.contains('Chad Kennedy').click();
     cy.get(adminPageElements.adduserusernameInput).type(username);
     cy.get(adminPageElements.adduserpasswordInput).type(password);
     cy.get(adminPageElements.adduserconfirmpasswordInput).type(confirmPassword);
@@ -138,4 +139,3 @@ export function deleteUserButton() {
     cy.get(adminPageElements.deleteuserButton).click();
     cy.get(adminPageElements.deleteuserconfirmButton).click();
 }
-
