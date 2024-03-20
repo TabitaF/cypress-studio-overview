@@ -102,6 +102,10 @@ export function createTimesheet() {
     })
 }
 
+/**
+ * This function is used to click on the submit button, add an approved or 
+ * rejected comment and click on their respective buttons
+ */
 export function conditionTimesheet() {
     cy.wait(2000);
     cy.get(timePageElements.submitButton).click({ force: true });

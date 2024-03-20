@@ -1,7 +1,8 @@
 import { containShouldBeVisible, loginPageDefault } from "../common/utilities";
-import { timeMenuButton, editRecord, fillInputs, fillHoursInput, selectEmployee, viewButton, createTimesheet, actionViewButton, conditionTimesheet} from "../common/utilitiesTime";
+import { timeMenuButton, editRecord, fillInputs, fillHoursInput, selectEmployee, viewButton, createTimesheet, actionViewButton, conditionTimesheet } from "../common/utilitiesTime";
 import { startPage } from "../common/utilities";
-import { createPIMUserTest} from "../common/utilitiesPIM";
+import { createPIMUserTest } from "../common/utilitiesPIM";
+import { saveButton } from "../common/utilitiesAdmin";
 
 describe('Time tab - TC', function () {
     beforeEach(() => {
@@ -31,8 +32,14 @@ describe('Time tab - TC', function () {
         const fullName = createPIMUserTest();
         timeMenuButton();
         selectEmployee(fullName);
-        viewButton();   
+        viewButton();
         conditionTimesheet();
     })
 
+
+    afterEach(function () {
+        if (this.currentTest.state === 'failed') {
+            cy.screenshot();
+        }
+    })
 });
