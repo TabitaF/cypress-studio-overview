@@ -225,3 +225,35 @@ export function createPIMUserTest() {
 
     return `${firstName} ${middleName} ${lastName}`
 }
+
+/**
+ * This function is used to type the randomID created in the createPIMUserTest function
+ * @param {string} randomID - To input the ID 
+ */
+export function sameID(randomID) {
+    cy.get(pimPagesElements.pimEmployeeIDInput).clear();
+    cy.get(pimPagesElements.pimEmployeeIDInput).type(randomID);
+}
+
+/**
+ * This function is used to turn on the Create Login Details switch
+ */
+export function loginSwitch() {
+    cy.get(pimPagesElements.pimCreateLoginDetails).click();
+}
+
+/**
+ * This function is used to complete the username field with a name form users.json file
+ */
+export function loginSwitchUsernameField() {
+    cy.fixture('users').then(users => {
+        const userNames = users.map(user => user.name);
+
+        cy.get(pimPagesElements.detailsUsername).type(userNames[0]);
+    });    
+}
+
+export function detailsDifferentPassword(password1 = 'test123', password2 = 'admin123'){
+    cy.get(pimPagesElements.detailsPassword).type(password1);
+    cy.get(pimPagesElements.detailsConfirmPassword).type(password2);
+}

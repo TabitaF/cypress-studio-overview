@@ -39,7 +39,7 @@ describe('Time tab - TC', function () {
 
     afterEach(function () {
         if (this.currentTest.state === 'failed') {
-            cy.screenshot();
+            cy.screenshot()
         }
-    })
-});
+    });
+})

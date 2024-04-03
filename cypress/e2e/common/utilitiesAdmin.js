@@ -94,7 +94,7 @@ export function selectUserRole(numeroAleatorio) {
  * @param {string} employeeName - The employee name to input
  * @param {string} username - The username to input
  */
-export function inputFields(employeeName = 'Chad', username = 'Kennedy', password = 'admin123', confirmPassword = 'admin123') {
+export function inputFields(employeeName = 'Chad', username = 'Test01', password = 'admin123', confirmPassword = 'admin123') {
     cy.get(adminPageElements.adduseremployeeNameInput).type(employeeName);
     cy.wait(2000);
     cy.contains('Chad Kennedy').click();
@@ -138,4 +138,61 @@ export function editUsername(text, username = 'Test02') {
 export function deleteUserButton() {
     cy.get(adminPageElements.deleteuserButton).click();
     cy.get(adminPageElements.deleteuserconfirmButton).click();
+}
+
+/**
+ * This function is used to edit the user and let the fields empty
+ */
+export function editUserEmpty() {
+    cy.get(adminPageElements.editusernameInput).clear();
+    cy.get(adminPageElements.editemployeenameInput).clear();
+    cy.get(adminPageElements.addUserRoleDropdown).click();
+    cy.get(adminPageElements.optionSelect).click();
+    cy.get(adminPageElements.adduserstatusDropdown).click();
+    cy.get(adminPageElements.statusSelectOption).click();
+}
+
+/**
+ * This function is used to create a repeted user
+ * @param {string} employeeName - The employee name to input
+ * @param {string} username - The username to input
+ * @param {string} password - The password to input
+ * @param {string} confirmPassword - The confirmed password to input
+ */
+export function inputFieldsRepeted(employeeName = 'Chad', username = 'Test01', password = 'admin123', confirmPassword = 'admin123') {
+    cy.get(adminPageElements.adduseremployeeNameInput).type(employeeName);
+    cy.wait(2000);
+    cy.contains('Chad Kennedy').click();
+    cy.get(adminPageElements.adduserusernameInput).type(username);
+    cy.get(adminPageElements.adduserpasswordInput).type(password);
+    cy.get(adminPageElements.adduserconfirmpasswordInput).type(confirmPassword);
+}
+
+/**
+ * This function is used to input a diferent password and confirmed password
+ * @param {string} employeeName - The employee name to input
+ * @param {string} username - The username to input
+ * @param {string} password - The password to input
+ * @param {string} confirmPassword - The confirmed password to input
+ * @param {string} username1 - The username to input
+ */
+
+const username1 = 'Test' + `${Date.now()}`;
+
+export function completeFields(employeeName = 'Chad', username = username1) {
+
+    cy.get(adminPageElements.adduseremployeeNameInput).type(employeeName);
+    cy.wait(2000);
+    cy.contains('Chad Kennedy').click();
+    cy.get(adminPageElements.adduserusernameInput).type(username);
+}
+
+/**
+ * This function is used to input the password and confirm password different
+ * @param {string} password 
+ * @param {string} confirmPassword 
+ */
+export function differentPassword( password = 'admin123', confirmPassword = 'test123') {
+    cy.get(adminPageElements.adduserpasswordInput).type(password);
+    cy.get(adminPageElements.adduserconfirmpasswordInput).type(confirmPassword);
 }

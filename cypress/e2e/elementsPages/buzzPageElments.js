@@ -4,12 +4,12 @@ export const buzzPageElements ={
     postButton:'.oxd-buzz-post-slot > .oxd-button',
     sharePhotosButton:'.orangehrm-buzz-create-post-actions > :nth-child(1)',
     shareVideoButton:'.orangehrm-buzz-create-post-actions > :nth-child(2)',
-    mostRecentButton:'.oxd-button--label-warn',
+    mostRecentButton:'.orangehrm-post-filters > :nth-child(1)',
     mostLikedButton:'.orangehrm-post-filters > :nth-child(2)',
     mostoCommentedButton:'.orangehrm-post-filters > :nth-child(3)',
     opcionesPost:':nth-child(1) > .oxd-sheet > .orangehrm-buzz-post > .orangehrm-buzz-post-header > .orangehrm-buzz-post-header-config > li > .oxd-icon-button > .oxd-icon',
     detailsPicture:':nth-child(1) > .oxd-sheet > :nth-child(2) > .orangehrm-buzz-post-body > .orangehrm-buzz-photos > .orangehrm-buzz-photos-item > .orangehrm-buzz-post-body-picture',
-    likeButton:':nth-child(1) > .oxd-sheet > .orangehrm-buzz-post-footer > .orangehrm-buzz-post-actions > div',
+    likeButton:':nth-child(1) > .oxd-sheet > .orangehrm-buzz-post-footer > .orangehrm-buzz-post-actions > :nth-child(1)',
     commentButton:':nth-child(1) > .oxd-sheet > .orangehrm-buzz-post-footer > .orangehrm-buzz-post-actions > :nth-child(2)',
     sharedButton:':nth-child(1) > .oxd-sheet > .orangehrm-buzz-post-footer > .orangehrm-buzz-post-actions > :nth-child(3)',
     commentBox:':nth-child(2) > .oxd-input',
@@ -28,8 +28,9 @@ export const buzzPageElements ={
     editPost:'.oxd-dropdown-menu > :nth-child(2)',
     editPostText:'.orangehrm-buzz-post-modal-header-text > .oxd-buzz-post > .oxd-buzz-post-input',
     editPostButton:'.oxd-form-actions > .oxd-button',
-    deletPost:'.oxd-dropdown-menu > :nth-child(1)',
-    confirmDeletButton:'.oxd-button--label-danger'
+    deletPost:'.orangehrm-buzz-post-header-config-item',
+    confirmDeletButton:'.oxd-button--label-danger',
+    commentButton:':nth-child(1) > .oxd-sheet > .orangehrm-buzz-post-footer > .orangehrm-buzz-post-actions > :nth-child(2) > .oxd-icon'
 }
 
 /**Test cases para crear
@@ -37,14 +38,14 @@ export const buzzPageElements ={
  * -editar post
  * -borrar post
  * -crear post de foto
- * editar post de foto
- * borrar post de foto
+ * -editar post de foto
+ * -borrar post de foto
  * crear post de video
  * editar post de video 
  * borrar post de video
- * abrir los most recent post
- * abrir los most liked post
- * abrir los most commented post
+ * -abrir los most recent post
+ * -abrir los most liked post
+ * -abrir los most commented post
  * borrar post de otro user
  * dar me gusta a post
  * dejar comentario en un post

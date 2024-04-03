@@ -34,3 +34,7 @@ export function loginPageDefault(user='Admin', password='admin123') {
 export function containShouldBeVisible(text) {
     cy.contains(text).should('be.visible');
 }
+
+export function createID() {
+    return Math.floor(Math.random() * 1000000).toString();
+}
